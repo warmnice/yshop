@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+input {
+    border-width: 0;
+    color: black;
+    font-size: 15px;
+    padding-left: 10px;
+    &:focus {
+        outline: none;
+        color: grey;
+        font-size: 15px;
+    }
+    &:active {
+        outline: none;
+        color: grey;
+        font-size: 15px;
+    }
+    &::placeholder {
+        color: grey;
+        font-size: 15px;
+    }
+}
+.input {
+  border-bottom: 1px solid rgb(186, 183, 183);
+  height: 32px;
+  margin-top: 15px;
+  color: grey;
+  font-size: 15px;
+  &:hover {
+    border-bottom-color: rgb(67, 67, 247);
+  }
+}
