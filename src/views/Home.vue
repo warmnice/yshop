@@ -106,7 +106,7 @@
     </div>
     <div class="right">
       <Nav />
-      <router-view />
+      <router-view class="view"/>
     </div>
   </div>
 </template>
@@ -170,8 +170,11 @@ const { fold } = storeToRefs(store)
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  .test {
-    background-color: pink;
+  .view {
+    margin-top: 10vh;
+    width: 87.4vw;
+    right: 0.6vw;
+    background-color: rgb(205, 212, 216);
   }
   &::-webkit-scrollbar {
     width: 0.6vw;
@@ -221,7 +224,7 @@ const { fold } = storeToRefs(store)
       }
     }
     svg {
-      margin-left: 0.7vw;
+      margin-left: 0.6vw;
     }
     span {
       display: none;

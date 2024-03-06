@@ -9,6 +9,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@element-plus/icons": "^0.0.11",
     "axios": "^1.6.7",
     "core-js": "^3.8.3",
     "echarts": "^5.5.0",
@@ -16,11 +17,13 @@
     "pinia": "^2.1.7",
     "screenfull": "^6.0.2",
     "vue": "^3.2.13",
+    "vue-draggable-plus": "^0.3.5",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@iconify-json/ep": "^1.1.14",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",

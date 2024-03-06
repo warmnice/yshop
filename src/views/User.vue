@@ -1,5 +1,5 @@
 <template>
-  <div class="view">
+  <div>
     <div class="condition">
       <Card title="会员总数" total-num="222" section-title="今日订单数" section-num="0" left-title="商品管理" right-title="会员管理">
         <template #leftImg>
@@ -104,12 +104,6 @@ function drawCategory2 () {
 </script>
 
 <style lang="scss">
-.view {
-  width: 87.4vw;
-  margin-top: 10vh;
-  right: 0.6vw;
-  background-color: rgb(205, 212, 216);
-}
 .condition {
   display: flex;
   justify-content: space-evenly;
