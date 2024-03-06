@@ -17,22 +17,22 @@
       </div>
     </div>
     <div class="tag">
-      <router-link to="/home/user" class="start"><span>首页</span></router-link>
-      <router-link v-show="tagShow[0]" to="/home/decoration"><span>终端装修</span><span>X</span></router-link>
-      <router-link v-show="tagShow[1]" to="/home/productm"><span>商品管理</span><span>X</span></router-link>
-      <router-link v-show="tagShow[2]" to="/home/memberm"><span>会员管理</span><span>X</span></router-link>
-      <router-link v-show="tagShow[3]" to="/home/orderm"><span>订单管理</span><span>X</span></router-link>
-      <router-link v-show="tagShow[4]" to="/home/couponm"><span>电子券管理</span><span>X</span></router-link>
-      <router-link v-show="tagShow[5]" to="/home/marketm"><span>营销管理</span><span>X</span></router-link>
-      <router-link v-show="tagShow[6]" to="/home/distributionm"><span>分销管理</span><span>X</span></router-link>
-      <router-link v-show="tagShow[7]" to="/home/moneym"><span>财务管理</span><span>X</span></router-link>
-      <router-link v-show="tagShow[8]" to="/home/shopm"><span>门店管理</span><span>X</span></router-link>
-      <router-link v-show="tagShow[9]" to="/home/integralm"><span>积分管理</span><span>X</span></router-link>
-      <router-link v-show="tagShow[10]" to="/home/wxm"><span>微信管理</span><span>X</span></router-link>
-      <router-link v-show="tagShow[11]" to="/home/shpos"><span>商城配置</span><span>X</span></router-link>
-      <router-link v-show="tagShow[12]" to="/home/systemm"><span>系统管理</span><span>X</span></router-link>
-      <router-link v-show="tagShow[13]" to="/home/smonitor"><span>系统监控</span><span>X</span></router-link>
-      <router-link v-show="tagShow[14]" to="/home/stool"><span>系统工具</span><span>X</span></router-link>
+      <router-link v-show="tagShow[0]" to="/home/user" :class="{clickTag: tagClick[0]}" @click="resetTagClick(0)" class="start"><span>首页</span></router-link>
+      <router-link v-show="tagShow[1]" to="/home/decoration" :class="{clickTag: tagClick[1]}" @click="resetTagClick(1)"><span>终端装修</span><span @click="tagShow[0] = false">X</span></router-link>
+      <router-link v-show="tagShow[2]" to="/home/productm" :class="{clickTag: tagClick[2]}" @click="resetTagClick(2)"><span>商品管理</span><span @click="tagShow[1] = false">X</span></router-link>
+      <router-link v-show="tagShow[3]" to="/home/memberm" :class="{clickTag: tagClick[3]}" @click="resetTagClick(3)"><span>会员管理</span><span @click="tagShow[2] = false">X</span></router-link>
+      <router-link v-show="tagShow[4]" to="/home/orderm" :class="{clickTag: tagClick[4]}" @click="resetTagClick(4)"><span>订单管理</span><span @click="tagShow[3] = false">X</span></router-link>
+      <router-link v-show="tagShow[5]" to="/home/couponm" :class="{clickTag: tagClick[5]}" @click="resetTagClick(5)"><span>电子券管理</span><span @click="tagShow[4] = false">X</span></router-link>
+      <router-link v-show="tagShow[6]" to="/home/marketm" :class="{clickTag: tagClick[6]}" @click="resetTagClick(6)"><span>营销管理</span><span @click="tagShow[5] = false">X</span></router-link>
+      <router-link v-show="tagShow[7]" to="/home/distributionm" :class="{clickTag: tagClick[7]}" @click="resetTagClick(7)"><span>分销管理</span><span @click="tagShow[6] = false">X</span></router-link>
+      <router-link v-show="tagShow[8]" to="/home/moneym" :class="{clickTag: tagClick[8]}" @click="resetTagClick(8)"><span>财务管理</span><span @click="tagShow[7] = false">X</span></router-link>
+      <router-link v-show="tagShow[9]" to="/home/shopm" :class="{clickTag: tagClick[9]}" @click="resetTagClick(9)"><span>门店管理</span><span @click="tagShow[8] = false">X</span></router-link>
+      <router-link v-show="tagShow[10]" to="/home/integralm" :class="{clickTag: tagClick[10]}" @click="resetTagClick(10)"><span>积分管理</span><span @click="tagShow[9] = false">X</span></router-link>
+      <router-link v-show="tagShow[11]" to="/home/wxm" :class="{clickTag: tagClick[11]}" @click="resetTagClick(11)"><span>微信管理</span><span @click="tagShow[10] = false">X</span></router-link>
+      <router-link v-show="tagShow[12]" to="/home/shpos" :class="{clickTag: tagClick[12]}" @click="resetTagClick(12)"><span>商城配置</span><span @click="tagShow[11] = false">X</span></router-link>
+      <router-link v-show="tagShow[13]" to="/home/systemm" :class="{clickTag: tagClick[13]}" @click="resetTagClick(13)"><span>系统管理</span><span @click="tagShow[12] = false">X</span></router-link>
+      <router-link v-show="tagShow[14]" to="/home/smonitor" :class="{clickTag: tagClick[14]}" @click="resetTagClick(14)"><span>系统监控</span><span @click="tagShow[13] = false">X</span></router-link>
+      <router-link v-show="tagShow[15]" to="/home/stool" :class="{clickTag: tagClick[15]}" @click="resetTagClick(15)"><span>系统工具</span><span @click="tagShow[14] = false">X</span></router-link>
     </div>
   </nav>
 </template>
@@ -59,6 +59,14 @@ function exitFullScreen () {
   }
 }
 const tagShow = ref(Array.from({ length: 15 }, () => true))
+const tagClick = ref(Array.from({ length: 15 }, () => false))
+tagClick.value[0] = true
+function resetTagClick (index) {
+  for (let i = 0; i < tagClick.value.length; i++) {
+    tagClick.value[i] = false
+  }
+  tagClick.value[index] = true
+}
 </script>
 
 <style lang="scss">
@@ -153,14 +161,18 @@ nav {
   content: url(../assets/img/cancelF.png);
 }
 .clickTag {
-  background-color: rgb(53, 183, 53);
+  background-color: rgb(103, 103, 238);
   color: #fff;
   span {
-    &::before {
-      content: '';
-      display: inline-block;
-      border: 0.5vw #fff solid;
-      border-radius: 50%;
+    color: #fff;
+    &:nth-child(1) {
+      &::before {
+        content: '';
+        display: inline-block;
+        border: 0.35vw #fff solid;
+        margin-right: 0.3vw;
+        border-radius: 50%;
+      }
     }
   }
 }
