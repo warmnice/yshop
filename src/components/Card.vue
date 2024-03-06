@@ -2,29 +2,31 @@
   <div class="card">
     <div class="item1">
       <div class="top">
-        <span class="total">会员总数</span>
+        <span class="total">{{ title }}</span>
         <span class="platform">全平台</span>
       </div>
       <div class="bottom">
-        <div class="number">1234</div>
+        <div class="number">{{ totalNum }}</div>
         <div class="data">
-          <span>今日订单数</span>
-          <span class="order">1单</span>
+          <span>{{ sectionTitle }}</span>
+          <span class="order">{{ sectionNum }}单</span>
         </div>
       </div>
     </div>
     <div class="item2">
-      <img src="../assets/img/expand.png" alt="">
-      <span>商品管理</span>
+      <slot name="leftImg" class="slot"></slot>
     </div>
     <div class="item3">
-      <img src="../assets/img/expand.png" alt="">
-      <span>会员管理</span>
+      <slot name="rightImg" class="slot"></slot>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+// 声明props
+import defineProps from 'vue'
+defineProps(['title', 'totalNum', 'sectionTitle', 'sectionNum'])
+</script>
 
 <style lang="scss">
 .card {
@@ -75,6 +77,7 @@
       }
       .order {
         font-size: 0.85vw;
+        letter-spacing: 0.2vw;
       }
     }
     .top, .number, .data {
@@ -97,15 +100,18 @@
   }
   .item2, .item3 {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    img {
-      scale: 1.5;
-    }
-    span {
-      margin-top: 1.8vh;
-      font-size: 1.5vh;
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      font-size: 12px;
+      span {
+        margin-top: 1vh;
+      }
     }
   }
 }

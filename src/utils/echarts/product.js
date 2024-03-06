@@ -1,4 +1,7 @@
 const options = {
+  title: {
+    text: '商品分析'
+  },
   series: [
     {
       type: 'pie',
@@ -15,7 +18,8 @@ const options = {
           value: 0,
           name: '彩页'
         }
-      ]
+      ],
+      radius: '50%'
     }
   ]
 }

@@ -1,4 +1,4 @@
-const options = {
+const bar = {
   title: {
     text: '柱状图'
   },
@@ -15,4 +15,4 @@ const options = {
     }
   ]
 }
-export default options
+export default bar
