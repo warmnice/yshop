@@ -9,20 +9,14 @@
     </div>
     <div class="right">
       <div class="nav">
-        <router-link to="namelogin" :class="{active : nameActive}" @click="nameActive = true, numberActive = false">账号密码登录</router-link>
-        <router-link to="numberlogin" :class="{active : numberActive}" @click="numberActive = true, nameActive = false">手机验证码登录</router-link>
+        <router-link to="/login/namelogin" :class="{active : nameActive}" @click="nameActive = true, numberActive = false">账号密码登录</router-link>
+        <router-link to="/login/numberlogin" :class="{active : numberActive}" @click="numberActive = true, nameActive = false">手机验证码登录</router-link>
       </div>
       <router-view class="view" v-slot="{ Component }">
           <keep-alive>
             <component :is="Component" />
          </keep-alive>
       </router-view>
-      <!-- <keep-alive> -->
-        <!-- <router-view  class="view" v-if="$route.meta.keepAlive" :key="$route.fullPath"/> -->
-      <!-- </keep-alive> -->
-      <!-- <keep-alive> -->
-        <!-- <router-view class="view" :is="view"/> -->
-      <!-- </keep-alive> -->
       <router-link to="/register" class="register">注册</router-link>
     </div>
   </section>

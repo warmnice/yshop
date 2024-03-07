@@ -28,7 +28,23 @@ const routes = [
   },
   {
     path: '/register',
-    component: () => import('../views/Register.vue')
+    component: () => import('../views/Register.vue'),
+    children: [
+      {
+        path: 'nameregister',
+        component: () => import('../components/NameRegister.vue'),
+        meta: {
+          keepAlive: true
+        }
+      },
+      {
+        path: 'numberregister',
+        component: () => import('../components/NumberRegister.vue'),
+        meta: {
+          keepAlive: true
+        }
+      }
+    ]
   },
   {
     path: '/home',

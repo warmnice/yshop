@@ -8,15 +8,14 @@
       <input type="text" placeholder="请输入验证码" v-model.number="number" @blur="number = number.toString().slice(0, 6) , numberValid = !phoneValid || number !== ''">
       <a href="#" @click="getMsgNum">获取验证码</a>
     </div>
-    <a href="#" class="forget">忘记密码</a>
     <p class="tips" v-show="!phoneValid">请输入手机号</p>
     <p class="tips" v-show="!numberValid">请输入验证码</p>
     <p class="tips" v-show="!agree">阅读并勾选协议</p>
     <p>
      <span :class="{agree : clickAgree}" @click="clickAgree=!clickAgree"></span>
-     登录即视为您已阅读并同意<a href="">服务条款、隐私政策</a>
+     注册即视为您已阅读并同意<a href="">服务条款、隐私政策</a>
     </p>
-    <div class="login" @click="validateNum">登录</div>
+    <div class="register" @click="validateNum">注册</div>
   </div>
 </template>
 
@@ -99,17 +98,12 @@ p {
   background: url(../assets/img/right.png);
   background-size: contain;
 }
-.login {
+.register {
   margin-top: 10px;
   height: 40px;
   background-color: rgb(67, 67, 247);
   text-align: center;
   line-height: 40px;
   color: white;
-}
-.forget {
-  float: right;
-  margin-top: 10px;
-  font-size: 10px;
 }
 </style>
