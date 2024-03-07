@@ -17,22 +17,22 @@
       </div>
     </div>
     <div class="tag">
-      <router-link v-show="tagShow[0]" to="/home/user"  :class="{clickTag: tagClick[0]}" class="start"><span @click="homeStore.resetTagClick(0)">首页</span></router-link>
-      <router-link v-show="tagShow[1]" to="/home/decoration" :class="{clickTag: tagClick[1]}"><span @click="homeStore.resetTagClick(1)">终端装修</span><span @click="homeStore.showRightTag(1)">X</span></router-link>
-      <router-link v-show="tagShow[2]" to="/home/productm" :class="{clickTag: tagClick[2]}"><span @click="homeStore.resetTagClick(2)">商品管理</span><span @click="homeStore.showRightTag(2)">X</span></router-link>
-      <router-link v-show="tagShow[3]" to="/home/memberm" :class="{clickTag: tagClick[3]}"><span @click="homeStore.resetTagClick(3)">会员管理</span><span @click="homeStore.showRightTag(3)">X</span></router-link>
-      <router-link v-show="tagShow[4]" to="/home/orderm" :class="{clickTag: tagClick[4]}"><span @click="homeStore.resetTagClick(4)">订单管理</span><span @click="homeStore.showRightTag(4)">X</span></router-link>
-      <router-link v-show="tagShow[5]" to="/home/couponm" :class="{clickTag: tagClick[5]}"><span @click="homeStore.resetTagClick(5)">电子券管理</span><span @click="homeStore.showRightTag(5)">X</span></router-link>
-      <router-link v-show="tagShow[6]" to="/home/marketm" :class="{clickTag: tagClick[6]}"><span @click="homeStore.resetTagClick(6)">营销管理</span><span @click="homeStore.showRightTag(6)">X</span></router-link>
-      <router-link v-show="tagShow[7]" to="/home/distributionm" :class="{clickTag: tagClick[7]}"><span @click="homeStore.resetTagClick(7)">分销管理</span><span @click="homeStore.showRightTag(7)">X</span></router-link>
-      <router-link v-show="tagShow[8]" to="/home/moneym" :class="{clickTag: tagClick[8]}"><span @click="homeStore.resetTagClick(8)">财务管理</span><span @click="homeStore.showRightTag(8)">X</span></router-link>
-      <router-link v-show="tagShow[9]" to="/home/shopm" :class="{clickTag: tagClick[9]}"><span @click="homeStore.resetTagClick(9)">门店管理</span><span @click="homeStore.showRightTag(9)">X</span></router-link>
-      <router-link v-show="tagShow[10]" to="/home/integralm" :class="{clickTag: tagClick[10]}"><span @click="homeStore.resetTagClick(10)">积分管理</span><span @click="homeStore.showRightTag(10)">X</span></router-link>
-      <router-link v-show="tagShow[11]" to="/home/wxm" :class="{clickTag: tagClick[11]}"><span @click="homeStore.resetTagClick(11)">微信管理</span><span @click="homeStore.showRightTag(11)">X</span></router-link>
-      <router-link v-show="tagShow[12]" to="/home/shpos" :class="{clickTag: tagClick[12]}"><span @click="homeStore.resetTagClick(12)">商城配置</span><span @click="homeStore.showRightTag(12)">X</span></router-link>
-      <router-link v-show="tagShow[13]" to="/home/systemm" :class="{clickTag: tagClick[13]}"><span @click="homeStore.resetTagClick(13)">系统管理</span><span @click="homeStore.showRightTag(13)">X</span></router-link>
-      <router-link v-show="tagShow[14]" to="/home/smonitor" :class="{clickTag: tagClick[14]}"><span @click="homeStore.resetTagClick(14)">系统监控</span><span @click="homeStore.showRightTag(14)">X</span></router-link>
-      <router-link v-show="tagShow[15]" to="/home/stool" :class="{clickTag: tagClick[15]}"><span @click="homeStore.resetTagClick(15)">系统工具</span><span @click="homeStore.showRightTag(15)">X</span></router-link>
+      <span :class="{clickTag: tagClick[0]}" v-show="tagShow[0]"><router-link to="/home/user" class="start" @click="homeStore.resetTagClick(0)">首页</router-link></span>
+      <span :class="{clickTag: tagClick[1]}" v-show="tagShow[1]"><router-link to="/home/decoration" @click="homeStore.resetTagClick(1)">终端装修</router-link><span @click="homeStore.showRightTag(1)">X</span></span>
+      <span :class="{clickTag: tagClick[2]}" v-show="tagShow[2]"><router-link to="/home/productm" @click="homeStore.resetTagClick(2)">商品管理</router-link><span @click="homeStore.showRightTag(2)">X</span></span>
+      <span :class="{clickTag: tagClick[3]}" v-show="tagShow[3]"><router-link to="/home/memberm" @click="homeStore.resetTagClick(3)">会员管理</router-link><span @click="homeStore.showRightTag(3)">X</span></span>
+      <span :class="{clickTag: tagClick[4]}" v-show="tagShow[4]"><router-link to="/home/orderm" @click="homeStore.resetTagClick(4)">订单管理</router-link><span @click="homeStore.showRightTag(4)">X</span></span>
+      <span :class="{clickTag: tagClick[5]}" v-show="tagShow[5]"><router-link to="/home/couponm" @click="homeStore.resetTagClick(5)">电子券管理</router-link><span @click="homeStore.showRightTag(5)">X</span></span>
+      <span :class="{clickTag: tagClick[6]}" v-show="tagShow[6]"><router-link to="/home/marketm" @click="homeStore.resetTagClick(6)">营销管理</router-link><span @click="homeStore.showRightTag(6)">X</span></span>
+      <span :class="{clickTag: tagClick[7]}" v-show="tagShow[7]"><router-link to="/home/distributionm" @click="homeStore.resetTagClick(7)">分销管理</router-link><span @click="homeStore.showRightTag(7)">X</span></span>
+      <span :class="{clickTag: tagClick[8]}" v-show="tagShow[8]"><router-link to="/home/moneym" @click="homeStore.resetTagClick(8)">财务管理</router-link><span @click="homeStore.showRightTag(8)">X</span></span>
+      <span :class="{clickTag: tagClick[9]}" v-show="tagShow[9]"><router-link to="/home/shopm" @click="homeStore.resetTagClick(9)">门店管理</router-link><span @click="homeStore.showRightTag(9)">X</span></span>
+      <span :class="{clickTag: tagClick[10]}" v-show="tagShow[10]"><router-link to="/home/integralm" @click="homeStore.resetTagClick(10)">积分管理</router-link><span @click="homeStore.showRightTag(10)">X</span></span>
+      <span :class="{clickTag: tagClick[11]}" v-show="tagShow[11]"><router-link to="/home/wxm" @click="homeStore.resetTagClick(11)">微信管理</router-link><span @click="homeStore.showRightTag(11)">X</span></span>
+      <span :class="{clickTag: tagClick[12]}" v-show="tagShow[12]"><router-link to="/home/shpos" @click="homeStore.resetTagClick(12)">商城配置</router-link><span @click="homeStore.showRightTag(12)">X</span></span>
+      <span :class="{clickTag: tagClick[13]}" v-show="tagShow[13]"><router-link to="/home/systemm" @click="homeStore.resetTagClick(13)">系统管理</router-link><span @click="homeStore.showRightTag(13)">X</span></span>
+      <span :class="{clickTag: tagClick[14]}" v-show="tagShow[14]"><router-link to="/home/smonitor" @click="homeStore.resetTagClick(14)">系统监控</router-link><span @click="homeStore.showRightTag(14)">X</span></span>
+      <span :class="{clickTag: tagClick[15]}" v-show="tagShow[15]"><router-link to="/home/stool" @click="homeStore.resetTagClick(15)">系统工具</router-link><span @click="homeStore.showRightTag(15)">X</span></span>
     </div>
   </nav>
 </template>
@@ -112,37 +112,35 @@ nav {
     overflow: hidden;
     display: flex;
     align-items: center;
-    .start {
-      margin-left: 1vw;
-    }
-    a {
+    > span {
       display: flex;
       align-items: center;
       font-size: 10px;
-      color: rgb(42, 40, 40);
       margin-left: 0.2vw;
       height: 2.5vh;
       border: 1px rgb(168, 166, 166) solid;
-      span {
+      a {
         margin: 0 0.4vw;
-        &:nth-child(1) {
-          margin: 0 0.4vw;
-        }
-        &:nth-child(2) {
-          margin: 0 0.1vw;
-          width: 0.8vw;
-          height: 0.8vw;
-          line-height: 0.9vw;
-          font-size: 7px;
-          text-align: center;
-          color: grey;
-          &:hover {
-            background-color: grey;
-            color: #fff;
-            border-radius: 50%;
-          }
+        color: rgb(42, 40, 40);
+      }
+      span {
+        margin: 0 0.1vw;
+        width: 0.8vw;
+        height: 0.8vw;
+        line-height: 0.9vw;
+        font-size: 7px;
+        text-align: center;
+        color: grey;
+        &:hover {
+          background-color: grey;
+          color: #fff;
+          border-radius: 50%;
+          cursor: pointer;
         }
       }
+    }
+    .start {
+      margin: 0 1vw;
     }
   }
 }
