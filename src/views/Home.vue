@@ -173,7 +173,6 @@ const { fold, tagClick } = storeToRefs(homeStore)
   .view {
     margin-top: 10vh;
     width: 87.4vw;
-    height: 90vh;
     right: 0.6vw;
     background-color: rgb(205, 212, 216);
   }

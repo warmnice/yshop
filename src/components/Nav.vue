@@ -72,6 +72,7 @@ nav {
   height: 10vh;
   right: 0.6vw;
   background-color: #fff;
+  z-index: 10000;
   .tool {
     height: 6.5vh;
     box-shadow: 0 2px 4px -2px rgb(186, 181, 181);
