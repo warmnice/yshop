@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="user">
     <div class="condition">
-      <Card title="会员总数" total-num="222" section-title="今日订单数" section-num="0" left-title="商品管理" right-title="会员管理">
+      <Card class="card" title="会员总数" total-num="222" section-title="今日订单数" section-num="0" left-title="商品管理" right-title="会员管理">
         <template #leftImg>
           <router-link to="/home/productm">
             <svg t="1708846995452" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8533"  width="3.7vw" height="4.5vh"><path d="M853.333333 384h-170.666666v93.866667-8.533334h-42.666667V384h-213.333333v85.333333H384V384H213.333333v426.666667h640V384z m42.666667 0v469.333333H170.666667V341.333333h213.333333v-21.333333C384 238.933333 452.266667 170.666667 533.333333 170.666667S682.666667 238.933333 682.666667 320V341.333333h213.333333v42.666667zM426.666667 341.333333h213.333333v-21.333333C640 260.266667 593.066667 213.333333 533.333333 213.333333S426.666667 260.266667 426.666667 320V341.333333z" fill="#5069d6" p-id="8534"></path></svg>
@@ -15,7 +15,7 @@
           </router-link>
         </template>
       </Card>
-      <Card title="订单总数" total-num="55" section-title="昨日订单数" section-num="2" left-title="订单管理" right-title="电子券管理">
+      <Card class="card" title="订单总数" total-num="55" section-title="昨日订单数" section-num="2" left-title="订单管理" right-title="电子券管理">
         <template #leftImg>
           <router-link to="/home/orderm">
             <svg t="1708847081673" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11911" width="3.5vw" height="4.5vh"><path d="M256 426.666667h554.666667v469.333333H256V426.666667z m42.666667 42.666666v384h469.333333v-384H298.666667z m42.666666 0H256v-42.666666h85.333333V362.666667C341.333333 256 426.666667 170.666667 533.333333 170.666667S725.333333 256 725.333333 362.666667V426.666667h85.333334v42.666666h-128V362.666667C682.666667 281.6 614.4 213.333333 533.333333 213.333333S384 281.6 384 362.666667V469.333333H341.333333z m192 256c-34.133333 0-64-29.866667-64-64s29.866667-64 64-64 64 29.866667 64 64-29.866667 64-64 64z" fill="#be7926" p-id="11912"></path></svg>
@@ -29,7 +29,7 @@
           </router-link>
         </template>
       </Card>
-      <Card title="总金额" total-num="123" section-title="近七天订单数" section-num="5" left-title="营销管理" right-title="分销管理">
+      <Card class="card" title="总金额" total-num="123" section-title="近七天订单数" section-num="5" left-title="营销管理" right-title="分销管理">
         <template #leftImg>
           <router-link to="/home/marketm">
             <svg t="1708847156219" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="14676" width="3.5vw" height="4.5vh"><path d="M101.344 850.672h237.328V469.328L273.728 424 101.344 570.672zM394.672 850.672H632v-379.12L517.344 568l-122.672-66.672zM688 426.672v424h237.328V429.328L824.016 296z" fill="#dbdbdb" p-id="14677"></path><path d="M140.544 464.544l129.072-107.968 246.576 150.112 292.416-275.392c1.056-0.992 1.92-2.144 2.816-3.248l49.248 49.808 79.312-223.2-227.52 73.296 54.448 55.072c-0.72 0.56-1.488 1.024-2.176 1.664L507.824 426.656 263.744 278.08 99.488 415.456c-13.568 11.344-15.36 31.52-4.016 45.072s31.536 15.376 45.072 4.016zM920 894.656H100c-17.664 0-32 14.336-32 32s14.336 32 32 32h820c17.664 0 32-14.336 32-32s-14.336-32-32-32z" fill="#bbbe26" p-id="14678"></path></svg>
@@ -43,7 +43,7 @@
           </router-link>
         </template>
       </Card>
-      <Card title="商品总数" total-num="3" section-title="本月订单数" section-num="2" left-title="财务管理" right-title="门店管理">
+      <Card class="card" title="商品总数" total-num="3" section-title="本月订单数" section-num="2" left-title="财务管理" right-title="门店管理">
         <template #leftImg>
           <router-link to="/home/moneym">
             <svg t="1708847234864" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17829" width="3.5vw" height="4.5vh"><path d="M824.832 102.4H229.888A127.488 127.488 0 0 0 102.4 229.888v594.944a127.488 127.488 0 0 0 127.488 127.488h594.944a127.488 127.488 0 0 0 127.488-127.488V229.888A127.488 127.488 0 0 0 824.832 102.4z m42.496 722.432a42.496 42.496 0 0 1-42.496 42.496H229.888a42.496 42.496 0 0 1-42.496-42.496V229.888a42.496 42.496 0 0 1 42.496-42.496h594.944a42.496 42.496 0 0 1 42.496 42.496zM644.096 286.72L527.36 420.352 409.6 286.72a43.008 43.008 0 0 0-60.416-4.096 42.496 42.496 0 0 0-2.56 60.416l123.904 141.824H399.872a42.496 42.496 0 0 0 0 84.992h84.992V614.4H399.872a42.496 42.496 0 0 0 0 84.992h84.992v42.496a42.496 42.496 0 0 0 84.992 0v-42.496h84.992a42.496 42.496 0 0 0 0-84.992h-84.992v-42.496h84.992a42.496 42.496 0 0 0 0-84.992H583.68l124.416-143.872a43.008 43.008 0 0 0-4.096-59.904 42.496 42.496 0 0 0-59.904 3.584z" p-id="17830" fill="#c588c4"></path></svg>
@@ -105,16 +105,21 @@ function drawCategory2 () {
 
 <style lang="scss">
 .condition {
+  width: 98%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  .card {
+    width: 24%;
+  }
 }
 .echarts {
+  width: 98%;
   height: 70vh;
   margin: 0 auto;
   margin-top: 2vh;
   background-color: #fff;
   box-shadow: 0 0 4px 0 rgb(185, 182, 182);
-  width: 84.3vw;
   .top {
     height: 8vh;
     line-height: 8vh;

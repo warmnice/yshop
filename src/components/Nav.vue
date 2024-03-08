@@ -139,9 +139,6 @@ nav {
         }
       }
     }
-    .start {
-      margin: 0 1vw;
-    }
   }
 }
 .fullImg {
@@ -152,18 +149,18 @@ nav {
 }
 .clickTag {
   background-color: rgb(103, 103, 238);
-  color: #fff;
-  span {
-    color: #fff;
-    &:nth-child(1) {
-      &::before {
-        content: '';
-        display: inline-block;
-        border: 0.35vw #fff solid;
-        margin-right: 0.3vw;
-        border-radius: 50%;
-      }
+  a {
+    color: #fff !important;
+    &::before {
+      content: '';
+      display: inline-block;
+      border: 0.3vw #fff solid;
+      margin-right: 0.3vw;
+      border-radius: 50%;
     }
+  }
+  span {
+    color: #fff !important;
   }
 }
 </style>
