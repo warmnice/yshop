@@ -1,20 +1,34 @@
 <template>
   <div>
     <div class="decoration">
-      <div class="option">
-        <VueDraggable group="slide" class="list-group">
-          <div v-for="id in list" :key="id" class="cursor-move h-30 bg-gray-500/5 rounded p-3 cursor-move">
+      <VueDraggable
+        class="flex flex-col gap-2 p-4 w-300px h-300px m-auto bg-gray-500/5 rounded overflow-auto option"
+        v-model="list1"
+        animation="150"
+        ghostClass="ghost"
+        group="people"
+        @update="onUpdate"
+        @add="onAdd"
+        @remove="remove"
+      >
+        <div v-for="id in list1" :key="id" class="cursor-move h-30 bg-gray-500/5 rounded p-3">
             <SlideShow />
-          </div>
-        </VueDraggable>
-      </div>
-      <div class="draft">
-        <VueDraggable group="slide" class="list-group">
-          <div v-for="id in list" :key="id" class="cursor-move h-30 bg-gray-500/5 rounded p-3 cursor-move">
-            <SlideShow />
-          </div>
-        </VueDraggable>
-      </div>
+        </div>
+      </VueDraggable>
+      <VueDraggable
+        class="flex flex-col gap-2 p-4 w-300px h-300px m-auto bg-gray-500/5 rounded overflow-auto draft"
+        v-model="list2"
+        animation="150"
+        group="people"
+        ghostClass="ghost"
+        @update="onUpdate"
+        @add="onAdd"
+        @remove="remove"
+      >
+        <div v-for="id in list2" :key="id" class="cursor-move h-30 bg-gray-500/5 rounded p-3">
+          <SlideShow />
+        </div>
+      </VueDraggable>
     </div>
   </div>
 </template>
@@ -24,10 +38,20 @@ import { ref } from 'vue'
 import { VueDraggable } from 'vue-draggable-plus'
 import SlideShow from '@/components/SlideShow.vue'
 
-const list = ref([1, 2, 3, 4])
+const list1 = ref([1, 2, 3, 4, 5])
+const list2 = ref([1, 2, 3, 4, 5])
+function onUpdate () {
+  console.log('update')
+}
+function onAdd () {
+  console.log('add')
+}
+function remove () {
+  console.log('remove')
+}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .decoration {
   position: relative;
   top: 5vh;
